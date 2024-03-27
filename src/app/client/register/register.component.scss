@@ -2,6 +2,9 @@
     margin-top: 50px;
     margin-bottom: 30px;
     width: 75%;
+    font-family: "Public Sans", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
   
   }
 
@@ -10,12 +13,13 @@
     display: block; 
     margin: 0 auto; 
     text-align: center; 
+    font-family: "Public Sans", sans-serif;
 }
 
 
 .btn{
     color: white;
-    background-color: #5CAC64;
+    background-color: #243B3B;
     display: block; /* Transforma o botão em um bloco para aplicar margin */
     gap: 10px;
     margin: 0 auto; /* Margem automática horizontal para centralizar */
@@ -25,7 +29,7 @@
 
 .btn-outline-danger{
     color: white;
-    background-color: red;
+    background-color: rgb(129, 2, 2);
     display: block; /* Transforma o botão em um bloco para aplicar margin */
     margin: 0 auto; /* Margem automática horizontal para centralizar */
     width: 220px; /* Defina a largura desejada para o botão */

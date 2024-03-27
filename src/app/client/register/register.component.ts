@@ -65,13 +65,13 @@ export default class RegisterComponent implements OnInit {
        if (this.client) {
          this.clientService.update(this.client.id, clientForm)
          .subscribe(() => {
-           this.router.navigate(['/listar']);
+           this.router.navigate(['/lista']);
        });
    
        } else {
          this.clientService.create(clientForm)
          .subscribe(() => {
-           this.router.navigate(['/listar']);
+           this.router.navigate(['/lista']);
          });
        }
      }

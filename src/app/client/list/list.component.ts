@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { UiFormComponent } from '../../ui-form/ui-form.component';
 import { ClientService } from '../../services/client.service';
 import { Client } from '../../model/client.interface';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -11,7 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     UiFormComponent,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterLink
   ],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'

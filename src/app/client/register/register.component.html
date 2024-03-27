@@ -16,7 +16,7 @@
             <input type="text" class="form-control" id="name" formControlName="name" placeholder="Digite o seu nome" required maxlength="120" minlength="8">
   
            @if(form.get('name')?.hasError('required') && form.get('name')?.touched) {
-            <p class="invalid-feedback d-block"> * O campo é obrigatório</p>
+            <p class="invalid-feedback d-block"> * O campo é obrigatório com nomes inciados em letras maiúsculas</p>
            }
           </div>
   
@@ -71,7 +71,7 @@
               } Cliente
              
             </button>
-            <button type="submit" class="btn btn-outline-danger" routerLink="/listar">Cancelar</button>
+            <button type="submit" class="btn btn-outline-danger" routerLink="">Cancelar</button>
           </div>
         </form>
        }
