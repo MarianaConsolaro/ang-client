@@ -1,7 +1,7 @@
 <app-ui-form>
   <div class="container">
     <h1 class="text-center px-5 py-1">
-        @if(client) {
+       @if(client) {
           Atualizar
         } @else {
           Cadastro de 
@@ -43,7 +43,7 @@
   
           </div>
           <div class="form-group mb-3">
-            <label for="cpf" class="form-label">Cpf:</label>
+            <label for="cpf" class="form-label">CPF:</label>
             <input type="text" class="form-control" id="cpf" formControlName="cpf" placeholder="000.000.000-00" required maxlength="14" minlength="11">
   
             @if(form.get('cpf')?.hasError('required') && form.get('cpf')?.touched) {
@@ -71,7 +71,7 @@
               } Cliente
              
             </button>
-            <button type="submit" class="btn btn-outline-danger" routerLink="">Cancelar</button>
+            <button type="submit" class="btn btn-outline-danger" routerLink="/lista">Cancelar</button>
           </div>
         </form>
        }
