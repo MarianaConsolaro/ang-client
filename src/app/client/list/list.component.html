@@ -1,0 +1,46 @@
+
+
+    <div class="container">
+        <h1>Listagem de Clientes</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>CPF</th>
+                    <th>Registro Usuário</th>
+                    <th>Opções
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(client of clients; track client.id) {
+                <tr>
+                    <td>{{ client.id }}</td>
+                    <td>{{ client.name }}</td>
+                    <td>{{ client.email }}</td>
+                    <td>{{ client.cel }}</td>
+                    <td>{{ client.cpf }}</td> 
+                    <td>{{ client.registryUser }}</td>
+                    <td><button class="btn btn-outline-success ms-2" [routerLink]="[client.id, 'edit']">
+                        Editar
+                      </button>
+                      <button class="btn btn-outline-danger ms-2" (click)="deleteClient(client)">
+                        Excluir
+                      </button>   
+                    </td>
+                </tr>               
+            }
+            </tbody>
+        </table>
+        <div class="text-end" routerLink="create">
+            <button class="btn btn-primary ">
+              Create Client
+            </button>      
+    </div>
+
+
+

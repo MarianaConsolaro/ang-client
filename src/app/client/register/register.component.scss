@@ -1,0 +1,43 @@
+.container {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 75%;
+  
+  }
+
+.title{
+    color: black;
+    display: block; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+
+.btn{
+    color: white;
+    background-color: #5CAC64;
+    display: block; /* Transforma o botão em um bloco para aplicar margin */
+    gap: 10px;
+    margin: 0 auto; /* Margem automática horizontal para centralizar */
+    width: 220px; /* Defina a largura desejada para o botão */
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+.btn-outline-danger{
+    color: white;
+    background-color: red;
+    display: block; /* Transforma o botão em um bloco para aplicar margin */
+    margin: 0 auto; /* Margem automática horizontal para centralizar */
+    width: 220px; /* Defina a largura desejada para o botão */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    opacity: 0.80;
+
+    
+}
+
+.form-label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+

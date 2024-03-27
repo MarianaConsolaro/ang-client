@@ -1,0 +1,81 @@
+<app-ui-form>
+  <div class="container">
+    <h1 class="text-center px-5 py-1">
+        @if(client) {
+          Atualizar
+        } @else {
+          Cadastro de 
+        } Cliente
+    </h1>
+    <div class="card border-success mb-3">
+      <div class="card-body">
+        @if(form) {
+        <form [formGroup]="form" (ngSubmit)="save()">
+          <div class="form-group mb-3">
+            <label for="name" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="name" formControlName="name" placeholder="Digite o seu nome" required maxlength="120" minlength="8">
+  
+           @if(form.get('name')?.hasError('required') && form.get('name')?.touched) {
+            <p class="invalid-feedback d-block"> * O campo é obrigatório</p>
+           }
+          </div>
+  
+          <div class="form-group mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" formControlName="email" placeholder="email@email.com.br" required maxlength="120" minlength="8">
+  
+            @if(form.get('email')?.hasError('required') && form.get('email')?.touched) {
+              <p class="invalid-feedback d-block">  * O campo é obrigatório</p>
+             }
+  
+            @if(form.get('email')?.hasError('email') && form.get('email')?.touched) {
+              <p class="invalid-feedback d-block"> * O email é inválido</p>
+            }
+          </div>
+  
+          <div class="form-group mb-3">
+            <label for="cel" class="form-label">Celular:</label>
+            <input type="text" class="form-control" id="cel" formControlName="cel" placeholder="(00)00000-0000" required maxlength="14" minlength="11">
+  
+            @if(form.get('cel')?.hasError('required') && form.get('cel')?.touched) {
+              <p class="invalid-feedback d-block"> * O campo é obrigatório</p>
+             }
+  
+          </div>
+          <div class="form-group mb-3">
+            <label for="cpf" class="form-label">Cpf:</label>
+            <input type="text" class="form-control" id="cpf" formControlName="cpf" placeholder="000.000.000-00" required maxlength="14" minlength="11">
+  
+            @if(form.get('cpf')?.hasError('required') && form.get('cpf')?.touched) {
+              <p class="invalid-feedback d-block"> * O campo é obrigatório</p>
+             }
+  
+          </div>
+  
+          <div class="form-group mb-3">
+            <label for="registryUser" class="form-label">Registro do Usuário:</label>
+            <input type="text" class="form-control" id="registryUser" formControlName="registryUser" placeholder="Digite seu nome de usuário" required maxlength="8" minlength="6">
+  
+            @if(form.get('registryUser')?.hasError('required') && form.get('registryUser')?.touched) {
+              <p class="invalid-feedback d-block"> * O campo é obrigatório</p>
+             }
+  
+          </div>
+  
+          <div class="text-end">
+            <button type="submit" class="btn btn-outline-success">
+              @if(client) {
+                Atualizar
+              } @else {
+                Cadastrar
+              } Cliente
+             
+            </button>
+            <button type="submit" class="btn btn-outline-danger" routerLink="/listar">Cancelar</button>
+          </div>
+        </form>
+       }
+      </div>
+    </div>
+  </div>
+</app-ui-form>

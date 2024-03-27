@@ -1,0 +1,11 @@
+.form-container {
+    width: 300%; /* Define a largura do contêiner */
+    max-width: 950px; /* Define a largura máxima para a imagem */
+    margin: 0 400px; /* Centraliza o contêiner horizontalmente */
+  }
+
+  .form-container img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+    height: 600%; /* Permite que a altura seja ajustada proporcionalmente */
+    display: block; /* Remove espaços em branco ao redor da imagem */
+  }
