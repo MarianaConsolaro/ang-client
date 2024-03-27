@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 
-![image](https://github.com/MarianaConsolaro/ang-client/blob/main/src/assets/gardener.png)
+![image](https://github.com/MarianaConsolaro/ang-client/blob/main/src/assets/template3.png)
 
 ## Development server
 
