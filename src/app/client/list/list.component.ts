@@ -34,6 +34,7 @@ export  default class ListComponent implements OnInit {
   }
 
   deleteClient(client: Client) {
+    if(confirm('Deseja realmente deletar esse cliente?'))
     this.clientService.delete(client.id)
       .subscribe(() => {
         this.loadAll();

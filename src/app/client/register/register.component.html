@@ -59,17 +59,14 @@
             @if(form.get('registryUser')?.hasError('required') && form.get('registryUser')?.touched) {
               <p class="invalid-feedback d-block"> * O campo é obrigatório</p>
              }
-  
           </div>
-  
           <div class="text-end">
-            <button type="submit" class="btn btn-outline-success">
+            <button type="submit" class="btn btn-outline-success" routerLink="/lista">
               @if(client) {
                 Atualizar
               } @else {
                 Cadastrar
               } Cliente
-             
             </button>
             <button type="submit" class="btn btn-outline-danger" routerLink="/lista">Cancelar</button>
           </div>
